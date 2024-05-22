@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет пользователя</title>
+    <link rel="stylesheet" href="{% static 'css/user.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="left">
+        <div class="user-info">
+                <img src="{% static 'img/userimg.jpeg' %}" alt="user_img">
+            <div class="user-text-info">
+                <h2 id="user-name"> Даниил</h2>
+                <p id="birth-date"> 25.03.23</p>
+            </div>
+        </div>
+        <div class="vaccination-info">
+            <h3>Ближайшая вакцинация:</h3>
+            <p><strong>Дата вакцинации:</strong> <span id="next-vaccination-date">25.03.23</span></p>
+            <p><strong>Название вакцины:</strong> <span id="vaccine-name">Вакцина</span></p>
+            <p><strong>Тип вакцинации:</strong> <span id="vaccination-type"> Повторная</span></p>
+            <p><strong>Информация о вакцине:</strong> <span id="vaccine-info"> Здесь будет информация о вакцине из базы данных</span></p>
+            <p><strong>Противопоказания:</strong> <span id="vaccine-info"> Здесь будет информация о противопоказаниях</span></p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="logo">
+            <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
+        </div>
+        <div class="buttons">
+            <div class="button-with-annotation">
+                <button class="button">Добавить вакцину</button>
+                <p class="under-button-text">Если уже поставили вакцину</p>
+            </div>
+            <div class="button-with-annotation">
+                <button class="button">Посмотреть календарь</button>
+                <p class="under-button-text">Если нужно больше информации</p>
+            </div>
+            <div class="button-with-annotation">
+                <button class="button">Добавить даты болезни</button>
+                <p class="under-button-text">Если ребенок был на больничном</p>
+            </div>
+        </div>
+        <a href="#" class="exit-link">Выход</a>
+    </div>
+</body>
+</html>

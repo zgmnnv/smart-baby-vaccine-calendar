@@ -1,0 +1,129 @@
+body {
+    font-family: 'Lexend', sans-serif;
+    background: #f4f4f9;
+}
+
+.container {
+    max-width: 1920;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start; /* Располагаем элементы слева */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    padding: 10px; /* Добавляем немного отступов */
+}
+
+.top_bar{
+    display: inline-flex;
+}
+.logo {
+    margin-top: 10%;
+    margin-left: 15%; /* Располагаем логотип на 5% от левого края */
+}
+
+.links {
+    display: flex; /* Располагаем ссылки в строку */
+    margin-top: 10%;
+    margin-left: 185%; /* Отступ слева */
+}
+
+.links a {
+    margin-right: 20px; /* Отступ между ссылками */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: 'Lexend', sans-serif;
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.70); /* черный на 70% яркости */
+}
+
+.center {
+    display: flex; /* Используем flexbox */
+    justify-content: space-between; /* Распределение элементов равномерно с равными отступами между ними */
+    align-items: center; /* Выравнивание элементов по вертикали по центру */
+    padding: 0 5%; /* Добавляем отступы справа и слева для центрирования элементов */
+}
+
+.left_center {
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    grid-gap: 20px; /* Расстояние между полями */
+    margin-top: 20px;
+}
+
+.input-block {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.input-block select {
+    width: 100%; /* Ширина поля ввода с учетом отступа слева */
+}
+
+.input-block select option {
+    font-size: 20px;
+    max-width: 100px; /* Максимальная ширина для вариантов в выпадающем списке */
+}
+
+.input-block select,
+.input-block input[type="date"],
+.input-block input[type="text"],
+.input-block input[type="email"],
+.input-block input[type="password"] {
+    padding-left: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 350px;
+    height: 60px;
+    padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 24px;
+    font-family: 'Lexend', sans-serif;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.submit_button {
+    margin-top: 9%;
+    width: 100%;
+    height: 63px;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Lexend', sans-serif;
+    background-color: rgba(74, 117, 185, 1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(74, 117, 185, 1);
+} 
+
+.doc3 {
+    width: 95%;
+    margin-bottom: 15%;
+}

@@ -1,0 +1,100 @@
+body {
+    background-color: #f0f4f8;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+.left, .right {
+    width: 50%;
+    padding: 20px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+}
+.left {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.logo{
+    margin-bottom: 30px;
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.user-info img {
+    border-radius: 50%;
+    width: 100px;
+    height:100px;
+    margin-right: 20px;
+}
+.user-text-info {
+    margin-left: 20px;
+}
+.user-info h2 {
+    margin: 0;
+}
+.user-info p {
+    margin: 0;
+    color: #666;
+}
+.vaccination-info {
+    margin-top: 20px;
+}
+.vaccination-info p {
+    margin: 5px 0;
+}
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+}
+.button {
+    width: 60%;
+    padding: 10px;
+    color: white;
+    background-color: rgba(74, 117, 185, 1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+}
+.exit-link {
+    margin-top: 100px;
+    color: #888888;
+    text-decoration: none;
+}
+.under-button-text {
+    color: rgba(0, 0, 0, 0.367);
+    font-size: 20px;
+    margin-top: 5px;
+    text-align: center;
+}
+.button-with-annotation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 10px;
+}
+
+.button-with-annotation:last-child {
+    margin-bottom: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
