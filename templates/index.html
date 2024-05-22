@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartVaccine.App</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="top_bar">
+                <div class="logo">
+                    <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
+                </div>
+                <div class="links">
+                    <a href="{% url 'registration' %}" class="register_link">Register</a>
+                    <a href="{% url 'login' %}" class="login_link">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+
+            <div class="left_center">
+                <div class="welcome_text">
+                    Keep your baby healthy.<br>
+                    We help you to make sure<br>
+                    you never miss about<br>
+                    an important vaccination
+                </div>
+                <div class="doreg_text">
+                    <br>
+                    Register and receive personalized<br>
+                    vaccine calendar today
+                </div>
+                  <form action="{% url 'registration' %}" target="_blank">
+                    <button class="get_calendar_button">Get vaccine calendar</button>
+                   </form>
+            </div>
+
+            <div class="r_center">
+                <img src="{% static 'img/doc_main2.jpg' %}" alt="doc_main2" class="doc_main2">
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <div class="newslatter_text">
+                Stay up to date with the best offers<br>
+                with SmartVaccine Newslatter
+            </div>
+            <div class="newslatter_form">
+                <input class="def_input" type="email" placeholder="Email Address...">
+                <button class="send_button" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

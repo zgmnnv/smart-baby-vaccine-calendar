@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartVaccine Registration</title>
+    <link rel="stylesheet" href="{% static 'css/registration.css' %}" />
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="top_bar">
+            <div class="logo">
+                <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="center">
+        <div class="left_center">
+            <form class="registration-form">
+                <div class="input-block">
+                    <label for="your-name">Ваше имя:</label>
+                    <input type="text" id="your-name" name="your-name" placeholder="Ольга">
+                </div>
+                <div class="input-block">
+                    <label for="baby-name">Имя ребёнка:</label>
+                    <input type="text" id="baby-name" name="baby-name" placeholder="Даниил">
+                </div>
+                <div class="input-block">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="super-mama@mail.ru">
+                </div>
+                <div class="input-block">
+                    <label for="dob">Дата рождения ребёнка:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                <div class="input-block">
+                    <label for="country">Страна:</label>
+                    <select id="country" name="country">
+                        <option value="russia">Россия</option>
+                        <option value="russia">Беларусь</option>
+                        <option value="russia">Казахстан</option>
+                    </select>
+                </div>
+                <div class="input-block">
+                    <label for="gender">Пол ребёнка:</label>
+                    <select id="gender" name="gender">
+                        <option value="boy">Мальчик</option>
+                        <option value="girl">Девочка</option>
+                    </select>
+                </div>
+                <div class="input-block">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" pattern="^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$" 
+                    title="Пароль должен содержать минимум 8 символов, как минимум одну цифру и буквы латинского алфавита" 
+                    placeholder="Пример пароля: passw0rd">
+                </div>
+                <div class="input-block">
+                    <button class="submit_button" type="submit">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+        <div class="r_center">
+                <img src="{% static 'img/doc_formdoc3.jpg' %}" alt="doc3" class="doc3">
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
