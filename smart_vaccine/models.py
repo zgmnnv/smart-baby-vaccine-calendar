@@ -19,10 +19,10 @@ class Child(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     birth_date = models.DateTimeField()
-    gender = models.IntegerField
-    country = models.IntegerField
+    gender = models.CharField(max_length=50, default='Boy')
+    country = models.CharField(max_length=50, default='Russia')
     parent_id = models.ForeignKey(User, on_delete=models.CASCADE)       
-    next_vaccine_id = models.CharField(max_length=50)
-    last_vaccination_id = models.ForeignKey(Vaccinations, on_delete=models.CASCADE)
-    next_vaccine_date = models.DateTimeField()
-    last_vaccine_date = models.DateTimeField()
+    next_vaccine_id = models.CharField(max_length=50, null=True)
+    last_vaccination_id = models.ForeignKey(Vaccinations, on_delete=models.CASCADE, null=True)
+    next_vaccine_date = models.DateTimeField(null=True)
+    last_vaccine_date = models.DateTimeField(null=True)

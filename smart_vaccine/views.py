@@ -29,7 +29,7 @@ def register_user(request):
         password = request.POST['password']
 
         # Создаем пользователя и сохраняем в базу
-        user = User(name=name, email=email, child_name=child_name, password=password)
+        user = User(username=name, email=email, child_name=child_name, password=password)
         user.save()
 
         # Создаем запись о ребенке пользователя и сохраняем в базу
@@ -39,7 +39,7 @@ def register_user(request):
 
         return HttpResponse('Вы успешно зарегистрированы!')
 
-    return render(request, 'login.html')
+    return render(request, 'registration.html')
 
 def login_user(request):
     if request.method == 'POST':
