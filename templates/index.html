@@ -16,8 +16,8 @@
                     <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
                 </div>
                 <div class="links">
-                    <a href="{% url 'registration' %}" class="register_link">Register</a>
-                    <a href="{% url 'login' %}" class="login_link">Login</a>
+                    <a href="{% url 'registration' %}" class="register_link">Регистрация</a>
+                    <a href="{% url 'login' %}" class="login_link">Вход</a>
                 </div>
             </div>
         </div>
@@ -26,18 +26,17 @@
 
             <div class="left_center">
                 <div class="welcome_text">
-                    Keep your baby healthy.<br>
-                    We help you to make sure<br>
-                    you never miss about<br>
-                    an important vaccination
+                    Заботиться о здоровье ребенка<br>
+                    стало проще. Мы напомним вам<br>
+                    о следующей вакцинации<br>
                 </div>
                 <div class="doreg_text">
                     <br>
-                    Register and receive personalized<br>
-                    vaccine calendar today
+                    Зарегистрируйтесь и получите<br>
+                    персональный календарь вакцинации
                 </div>
                   <form action="{% url 'registration' %}" target="_blank">
-                    <button class="get_calendar_button">Get vaccine calendar</button>
+                    <button class="get_calendar_button">Получить календарь вакцинации</button>
                    </form>
             </div>
 
@@ -49,12 +48,12 @@
 
         <div class="footer">
             <div class="newslatter_text">
-                Stay up to date with the best offers<br>
-                with SmartVaccine Newslatter
+                Будьте в курсе лучших предложений<br>
+                вместе с нашей новостной рассылкой
             </div>
             <div class="newslatter_form">
-                <input class="def_input" type="email" placeholder="Email Address...">
-                <button class="send_button" type="submit">Send</button>
+                <input class="def_input" type="email" placeholder="Email ...">
+                <button class="send_button" type="submit">Отправить</button>
             </div>
         </div>
     </div>

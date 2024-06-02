@@ -12,10 +12,11 @@
     <div class="container">
         <div class="left-side">
             <div class="logo">
-                    <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
+                <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
             </div>
             <div class="login-form">
-                <form action="#" method="post">
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
                     <label for="username">Имя пользователя</label>
                     <input type="text" id="username" name="username" required>
                     
