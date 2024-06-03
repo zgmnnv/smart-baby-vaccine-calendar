@@ -23,6 +23,7 @@ body {
     display: inline-flex;
 }
 .logo {
+    transform: scale(0.75); /* Уменьшаем изображение до 75% от исходного размера */
     margin-top: 10%;
     margin-left: 15%; /* Располагаем логотип на 5% от левого края */
 }

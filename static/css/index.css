@@ -10,28 +10,29 @@
     display: flex;
     justify-content: flex-start; /* Располагаем элементы слева */
     align-items: center; /* Выравниваем элементы по вертикали */
-    padding: 10px; /* Добавляем немного отступов */
 }
 
 .top_bar{
     display: inline-flex;
 }
+
 .logo {
-    margin-top: 10%;
-    margin-left: 15%; /* Располагаем логотип на 5% от левого края */
+    margin-top: 50px;
+    margin-left: 100px;
+    transform: scale(0.75); /* Уменьшаем изображение до 75% от исходного размера */
 }
 
 .links {
-    display: flex; /* Располагаем ссылки в строку */
-    margin-top: 10%;
-    margin-left: 188%; /* Отступ слева */
+    display: flex;
+    margin-top: 59px;
+    margin-left: 1050px; /* Отступ слева */
 }
 
 .links a {
     margin-right: 20px; /* Отступ между ссылками */
     text-decoration: none; /* Убираем подчеркивание */
     font-family: 'Lexend', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0.70); /* черный на 70% яркости */
 }
 
@@ -40,35 +41,37 @@
     display: flex; /* Используем flexbox */
     justify-content: space-between; /* Распределение элементов равномерно с равными отступами между ними */
     align-items: center; /* Выравнивание элементов по вертикали по центру */
-    padding: 0 5%; /* Добавляем отступы справа и слева для центрирования элементов */
+    padding: 0px 100px; /* Добавляем отступы справа и слева для центрирования элементов */
 }
 
 .doc_main2 {
-    width: 95%;
-    margin-top: 10%;
-    margin-left: 15%;
+    width: 80%;
+    margin-top: 25px;
+    margin-left: 50px;
 }
 
 .left_center {
     font-family: 'Lexend', sans-serif;
     display: flex;
     flex-direction: column;
+    margin-left: 30px;
+
 }
 
 .welcome_text {
-    font-size: 54px;
+    font-size: 36px;
     color: rgba(0, 0, 0, 0.75); /* черный на 50% яркости */
     margin-top: 30%;
 }
 
 .doreg_text {
-    font-size: 32px;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0.50); /* черный на 50% яркости */
 }
 
 .get_calendar_button {
     font-family: 'Lexend', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     color: white;
     background-color: rgba(74, 117, 185, 1);
     padding: 25px 20px; /* Внутренние отступы */
@@ -87,7 +90,7 @@
     background-color: rgba(245, 249, 254, 1);
 
     font-family: 'Lexend', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0.75); /* черный на 50% яркости */
 
 }
@@ -95,19 +98,19 @@
 .newslatter_text {
     margin-top: 2%;
     margin-left: 5%;
-    margin-bottom: 20px; /* добавляем отступ снизу */
+    margin-bottom: 20px;
 }
 
 .newslatter_form {
     margin-top: 20px;
     margin-left: auto;
-    position: relative; /* Для использования абсолютного позиционирования кнопки */
-    display: inline-block; /* Чтобы контейнер формы занимал только необходимое пространство */
+    position: relative;
+    display: inline-block;
 }
 
 .def_input::placeholder {
     font-family: 'Lexend', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0.50); /* черный на 50% яркости */
 }
 
@@ -123,7 +126,7 @@
 
 .send_button {
     font-family: 'Lexend', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     color: white;
     background-color: rgba(74, 117, 185, 1);
     padding: 25px 20px; 
@@ -132,6 +135,4 @@
     cursor: pointer;
     width: 200px;
 }
-
-
 

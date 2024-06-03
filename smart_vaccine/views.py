@@ -1,25 +1,20 @@
 from django.template.response import TemplateResponse
-from django.shortcuts import render
-from django.http import HttpResponse
-from .models import User, Child
+from django.shortcuts import render, redirect
+from .models import User, Child, Vaccinations
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
-from .models import Child, Vaccinations
 
 # Create your views here.
 def index(request):
     return TemplateResponse(request, "index.html")
 
-def login(request):
-    return TemplateResponse(request, "login.html")
-
 #@login_required
 def user(request):
     return TemplateResponse(request, "user.html")
 
-def registration(request):
-    return TemplateResponse(request, "registration.html")
+def welcome(request):
+    return TemplateResponse(request, "welcome.html")
 
 def register_user(request):
     if request.method == 'POST':
@@ -37,28 +32,24 @@ def register_user(request):
                       country=request.POST['country'], parent_id=User.objects.get(pk=user.id))
         child.save()
 
-        return HttpResponse('Вы успешно зарегистрированы!')
+        return render(request,'welcome.html')
 
     return render(request, 'registration.html')
 
 def login_user(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                messages.info(request, f"Добро пожаловать. Вы вошли как {username}.")
-                return render('user.html')
-            else:
-                messages.error(request, "Неверное имя пользователя или пароль.")
+        user_email = request.POST.get('user-email')
+        password = request.POST.get('password')
+        user = authenticate(request, username=user_email, password=password)
+
+        if user is not None:
+            login(request, user)
+            return render(request, 'user.html')  # Отображение страницы user.html после успешной авторизации
         else:
             messages.error(request, "Неверное имя пользователя или пароль.")
+            return redirect('login_user')  # Перенаправление на страницу логина в случае неверных учетных данных
     else:
-        form = AuthenticationForm()
-    return render(request, 'login.html', {'form': form})
+        return render(request, 'login.html')
 
 def child_dashboard(request):
     user = request.user
@@ -77,4 +68,4 @@ def child_dashboard(request):
         'last_vaccine': last_vaccine,
     }
 
-    return render(request, 'user_dashboard.html', context)
+    return render(request, 'user.html', context)

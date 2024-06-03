@@ -15,6 +15,7 @@ body {
     margin-left: 100px;
 }
 .logo{
+    transform: scale(0.75); /* Уменьшаем изображение до 75% от исходного размера */
     margin-bottom: 30px;
 }
 .right {

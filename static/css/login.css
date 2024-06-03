@@ -19,7 +19,7 @@ body, html {
 }
 
 .left-side {
-    font-size: 32px;
+    font-size: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,6 +28,7 @@ body, html {
 }
 
 .logo img {
+    transform: scale(0.75); /* Уменьшаем изображение до 75% от исходного размера */
     max-width: 100%;
     height: auto;
     margin-bottom: 40px;
@@ -52,7 +53,7 @@ body, html {
     height: 63px;
     margin-bottom: 20px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 24px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -60,7 +61,7 @@ body, html {
 .login-form button {
     padding: 10px;
     height: 63px;
-    font-size: 32px;
+    font-size: 24px;
     background-color: rgba(74, 117, 185, 1);
     color: white;
     border: none;

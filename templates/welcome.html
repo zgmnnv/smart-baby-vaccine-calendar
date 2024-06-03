@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать</title>
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
+    </div>
+    <div class="welcome_text">
+        Регистрация прошла успешно!
+    </div>
+    <div class="links">
+        <a href="{% url 'login' %}" class="login_link">Перейти на страницу авторизации</a>
+    </div>
+
+</div>
+</body>
+</html>

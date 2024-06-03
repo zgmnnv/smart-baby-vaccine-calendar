@@ -15,10 +15,10 @@
                 <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
             </div>
             <div class="login-form">
-                <form action="{% url 'login' %}" method="post">
+                <form action="{% url 'account' %}" method="post">
                     {% csrf_token %}
-                    <label for="username">Имя пользователя</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="user-email">Ваш email</label>
+                    <input type="email" id="user-email" name="user-email" required>
                     
                     <label for="password">Пароль</label>
                     <input type="password" id="password" name="password" required>

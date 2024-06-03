@@ -110,5 +110,11 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'smart_vaccine.User'
+LOGIN_URL = 'login_user'  # URL-адрес для авторизации
+LOGIN_REDIRECT_URL = 'account'  # URL-адрес, куда перенаправлять после успешной авторизации
