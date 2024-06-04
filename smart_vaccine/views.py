@@ -1,9 +1,10 @@
 from django.template.response import TemplateResponse
 from django.shortcuts import render, redirect
-from .models import User, Child, Vaccinations
+from .models import Child, Vaccinations
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
+from .models import User as CustomUser
 from django.contrib import messages
 
 
@@ -25,19 +26,20 @@ def register_user(request):
     if request.method == 'POST':
         name = request.POST['your-name']
         email = request.POST['email']
-        child_name = request.POST['baby-name']
+        child = request.POST['baby-name']
         password = request.POST['password']
 
         # Создаем пользователя и сохраняем в базу
-        user = User(username=name, email=email, child_name=child_name, password=password)
-        user.save()
+        registered_user = CustomUser(username=name, email=email, childname=child)
+        registered_user.set_password(password)
+        registered_user.save()
 
         # Создаем запись о ребенке пользователя и сохраняем в базу
-        child = Child(name=child_name, birth_date=request.POST['dob'], gender=request.POST['gender'],
-                      country=request.POST['country'], parent_id=User.objects.get(pk=user.id))
+        child = Child(name=child, birth_date=request.POST['dob'], gender=request.POST['gender'],
+                      country=request.POST['country'], parent_id=CustomUser.objects.get(pk=registered_user.pk))
         child.save()
 
-        return render(request, 'welcome.html')
+        return render(request,'welcome.html')
 
     return render(request, 'registration.html')
 

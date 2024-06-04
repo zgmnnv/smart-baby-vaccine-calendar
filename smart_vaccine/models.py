@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    child_name = models.CharField(max_length=50, blank=True, unique=False)
+    childname = models.CharField(max_length=50, blank=True, unique=False)
 
     class Meta:
         unique_together = [['username']]  # Убираем уникальность username
