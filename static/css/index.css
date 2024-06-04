@@ -1,15 +1,15 @@
 .body {
     font-family: 'Lexend', sans-serif;
-    color: rgba(0, 0, 0, 0.70); /* черный на 70% яркости */
-    line-height: 1.2; /* Регулировка интервала между строками */
+    color: rgba(0, 0, 0, 0.70);
+    line-height: 1.2;
     padding: 0;
     margin: 0;
 }
 
 .header {
     display: flex;
-    justify-content: flex-start; /* Располагаем элементы слева */
-    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .top_bar{
@@ -19,13 +19,13 @@
 .logo {
     margin-top: 50px;
     margin-left: 100px;
-    transform: scale(0.75); /* Уменьшаем изображение до 75% от исходного размера */
+    transform: scale(0.75);
 }
 
 .links {
     display: flex;
     margin-top: 59px;
-    margin-left: 1050px; /* Отступ слева */
+    margin-left: 970px; /* Отступ слева */
 }
 
 .links a {
@@ -46,7 +46,7 @@
 
 .doc_main2 {
     width: 80%;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-left: 50px;
 }
 
@@ -111,16 +111,17 @@
 .def_input::placeholder {
     font-family: 'Lexend', sans-serif;
     font-size: 24px;
-    color: rgba(0, 0, 0, 0.50); /* черный на 50% яркости */
+    color: rgba(0, 0, 0, 0.50);
 }
 
 .def_input {
-    width: 600px;
-    height: 80px;
+    width: 400px;
+    height: 40px;
     padding-left: 30px;
     padding-top: 10px;
     padding-bottom: 20px;
     border: none;
+    border-radius: 10px;
     vertical-align: middle;
 }
 
@@ -129,7 +130,7 @@
     font-size: 24px;
     color: white;
     background-color: rgba(74, 117, 185, 1);
-    padding: 25px 20px; 
+    padding: 20px 10px;
     border-radius: 10px;
     border: none;
     cursor: pointer;

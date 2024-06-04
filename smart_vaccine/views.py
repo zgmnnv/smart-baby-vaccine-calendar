@@ -2,19 +2,24 @@ from django.template.response import TemplateResponse
 from django.shortcuts import render, redirect
 from .models import User, Child, Vaccinations
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.hashers import make_password
+from django.contrib.auth.models import User
 from django.contrib import messages
+
 
 # Create your views here.
 def index(request):
     return TemplateResponse(request, "index.html")
 
+
 #@login_required
 def user(request):
     return TemplateResponse(request, "user.html")
 
+
 def welcome(request):
     return TemplateResponse(request, "welcome.html")
+
 
 def register_user(request):
     if request.method == 'POST':
@@ -32,24 +37,26 @@ def register_user(request):
                       country=request.POST['country'], parent_id=User.objects.get(pk=user.id))
         child.save()
 
-        return render(request,'welcome.html')
+        return render(request, 'welcome.html')
 
     return render(request, 'registration.html')
+
 
 def login_user(request):
     if request.method == 'POST':
         user_email = request.POST.get('user-email')
-        password = request.POST.get('password')
-        user = authenticate(request, username=user_email, password=password)
+        password = make_password(request.POST.get('password'))  # Хэшируем введенный пароль
+        user_auth = authenticate(request, username=user_email, password=password)
 
-        if user is not None:
-            login(request, user)
+        if user_auth is not None:
+            login(request, user_auth)
             return render(request, 'user.html')  # Отображение страницы user.html после успешной авторизации
         else:
             messages.error(request, "Неверное имя пользователя или пароль.")
             return redirect('login_user')  # Перенаправление на страницу логина в случае неверных учетных данных
     else:
         return render(request, 'login.html')
+
 
 def child_dashboard(request):
     user = request.user
