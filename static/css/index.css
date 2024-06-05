@@ -18,14 +18,14 @@
 
 .logo {
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 170px;
     transform: scale(0.75);
 }
 
 .links {
     display: flex;
     margin-top: 59px;
-    margin-left: 970px; /* Отступ слева */
+    margin-left: 850px; /* Отступ слева */
 }
 
 .links a {
@@ -39,29 +39,30 @@
 
 .center {
     display: flex; /* Используем flexbox */
-    justify-content: space-between; /* Распределение элементов равномерно с равными отступами между ними */
+    justify-content: center; /* Распределение элементов равномерно с равными отступами между ними */
     align-items: center; /* Выравнивание элементов по вертикали по центру */
-    padding: 0px 100px; /* Добавляем отступы справа и слева для центрирования элементов */
+    padding: 10px 0px
 }
 
 .doc_main2 {
-    width: 80%;
-    margin-top: 10px;
-    margin-left: 50px;
+    width: 90%;
+    margin-top: 40px;
+    margin-left: 20px;
 }
 
 .left_center {
     font-family: 'Lexend', sans-serif;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
+}
 
+.r_center {
 }
 
 .welcome_text {
     font-size: 36px;
     color: rgba(0, 0, 0, 0.75); /* черный на 50% яркости */
-    margin-top: 30%;
+    margin-top: 350px;
 }
 
 .doreg_text {
