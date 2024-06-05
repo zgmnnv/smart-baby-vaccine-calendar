@@ -3,8 +3,6 @@
     color: rgba(0, 0, 0, 0.70);
     line-height: 1.2;
     padding: 0;
-    max-width: 1920px;
-    max-height: 1080px;
     margin: 0 auto; /* Центрирование контента по центру */
     overflow: hidden;
 }
@@ -57,9 +55,6 @@
     font-family: 'Lexend', sans-serif;
     display: flex;
     flex-direction: column;
-}
-
-.r_center {
 }
 
 .welcome_text {
@@ -141,4 +136,63 @@
     width: 200px;
 }
 
-
+@media screen and (max-width: 1512px) {
+    .links {
+        display: flex;
+        margin-top: 59px;
+        margin-left: 250px; 
+    }
+    .welcome_text {
+        font-size: 32px;
+        color: rgba(0, 0, 0, 0.75);
+        margin-top: 170px; 
+    }
+    .doreg_text {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.50); /* черный на 50% яркости */
+    }
+    .center {
+        display: flex; /* Используем flexbox */
+        justify-content: center; /* Распределение элементов равномерно с равными отступами между ними */
+        align-items: center; /* Выравнивание элементов по вертикали по центру */
+        padding: 10px 100px
+    }
+    .left_center {
+        width: 700px;
+        margin-left: 70px;
+    }
+    .logo {
+        margin-top: 50px;
+        margin-left: 120px;
+        transform: scale(0.7);
+    }
+    .links {
+        display: flex;
+        margin-top: 60px;
+        margin-left: 600px;
+    }
+    
+    .links a {
+        margin-right: 20px;
+        text-decoration: none; 
+        font-family: 'Lexend', sans-serif;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.70); 
+    }
+    .doc_main2 {
+        width: 80%;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+    .get_calendar_button {
+        font-family: 'Lexend', sans-serif;
+        font-size: 20px;
+        color: white;
+        background-color: rgba(74, 117, 185, 1);
+        padding: 15px 15px; 
+        border-radius: 10px; 
+        border: none;
+        cursor: pointer;
+        margin-top: 30px;
+    }
+}

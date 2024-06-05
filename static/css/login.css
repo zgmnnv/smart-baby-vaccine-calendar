@@ -7,8 +7,6 @@
 
 body, html {
     height: 100%;
-    max-width: 1920px;
-    max-height: 1080px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -23,7 +21,7 @@ body, html {
 }
 
 .left-side {
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,7 +55,7 @@ body, html {
     height: 63px;
     margin-bottom: 20px;
     padding: 10px;
-    font-size: 24px;
+    font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -65,7 +63,7 @@ body, html {
 .login-form button {
     padding: 10px;
     height: 63px;
-    font-size: 24px;
+    font-size: 20px;
     background-color: rgba(74, 117, 185, 1);
     color: white;
     border: none;
@@ -97,4 +95,25 @@ body, html {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
+
+@media screen and (max-width: 1512px) {
+    .login-form button {
+        padding: 10px;
+        height: 50px;
+        font-size: 20px;
+        background-color: rgba(74, 117, 185, 1);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .login-form input {
+        height: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
 }
