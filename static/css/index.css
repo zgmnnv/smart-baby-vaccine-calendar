@@ -3,7 +3,10 @@
     color: rgba(0, 0, 0, 0.70);
     line-height: 1.2;
     padding: 0;
-    margin: 0;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0 auto; /* Центрирование контента по центру */
+    overflow: hidden;
 }
 
 .header {
@@ -137,4 +140,5 @@
     cursor: pointer;
     width: 200px;
 }
+
 

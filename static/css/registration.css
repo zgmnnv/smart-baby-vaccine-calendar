@@ -1,6 +1,10 @@
 body {
     font-family: 'Lexend', sans-serif;
     background: #f4f4f9;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0 auto; /* Центрирование контента по центру */
+    overflow: hidden;
 }
 
 .container {
