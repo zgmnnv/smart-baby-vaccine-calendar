@@ -9,23 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="left">
-        <div class="user-info">
-                <img src="{% static 'img/userimg.jpeg' %}" alt="user_img">
-            <div class="user-text-info">
-                <h2 id="user-name"> Даниил</h2>
-                <p id="birth-date"> 25.03.23</p>
-            </div>
-        </div>
-        <div class="vaccination-info">
-            <h3>Ближайшая вакцинация:</h3>
-            <p><strong>Дата вакцинации:</strong> <span id="next-vaccination-date">25.03.23</span></p>
-            <p><strong>Название вакцины:</strong> <span id="vaccine-name">Вакцина</span></p>
-            <p><strong>Тип вакцинации:</strong> <span id="vaccination-type"> Повторная</span></p>
-            <p><strong>Информация о вакцине:</strong> <span id="vaccine-info"> Здесь будет информация о вакцине из базы данных</span></p>
-            <p><strong>Противопоказания:</strong> <span id="vaccine-info"> Здесь будет информация о противопоказаниях</span></p>
+<div class="left">
+    <div class="user-info">
+        <img src="{% static 'img/userimg.jpeg' %}" alt="user_img">
+        <div class="user-text-info">
+            <h2 id="user-name">{{ child.name }}</h2>
+            <p id="birth-date">{{ child.birth_date|date:"d.m.Y" }}</p>
         </div>
     </div>
+    <div class="vaccination-info">
+        <h3>Ближайшая вакцинация:</h3>
+        <p><strong>Дата вакцинации:</strong> <span id="next-vaccination-date">{{ child.next_vaccine_date|date:"d.m.Y" }}</span></p>
+        <p><strong>Название вакцины:</strong> <span id="vaccine-name">{{ next_vaccine.name }}</span></p>
+        <p><strong>Информация о вакцине:</strong> <span id="vaccine-info">{{ next_vaccine.description }}</span></p>
+        <p><strong>Минимальный возраст (месяцы):</strong> <span id="min-age">{{ next_vaccine.min_age_in_month }}</span></p>
+        <hr>
+    </div>
+</div>
+
     <div class="right">
         <div class="logo">
             <img src="{% static 'img/logo_mini_orig.jpeg' %}" alt="logo">
@@ -44,7 +45,7 @@
                 <p class="under-button-text">Если ребенок был на больничном</p>
             </div>
         </div>
-        <a href="#" class="exit-link">Выход</a>
+        <a href="{% url 'logout' %}" class="exit-link">Выход</a>
     </div>
 </body>
 </html>

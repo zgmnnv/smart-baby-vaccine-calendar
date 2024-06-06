@@ -1,0 +1,42 @@
+body {
+    font-family: 'Lexend', sans-serif;
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    height: 100vh; /* Делаем контейнер высотой на весь экран */
+    background: white;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 0 auto; /* Центрирование контента по центру */
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1920px; /* Добавляем 'px' после значения ширины */
+    padding: 20px;
+    background: white;
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.logo {
+    transform: scale(0.75); /* Уменьшаем изображение до 75% от исходного размера */
+}
+
+.welcome_text {
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.75);
+    margin-top: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none; /* Убираем подчеркивание */
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    color: rgba(74, 117, 185, 1);
+}

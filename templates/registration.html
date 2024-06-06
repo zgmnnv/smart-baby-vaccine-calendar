@@ -1,11 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SmartVaccine Registration</title>
-    <link rel="stylesheet" href="{% static 'css/registration.css' %}" />
+<link rel="stylesheet" href="{% static 'css/registration.css' %}" />
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,43 +20,44 @@
 
     <div class="center">
         <div class="left_center">
-            <form class="registration-form">
+            <form class="registration-form" method="post" action="{% url 'registration' %}">
+                {% csrf_token %}
                 <div class="input-block">
                     <label for="your-name">Ваше имя:</label>
-                    <input type="text" id="your-name" name="your-name" placeholder="Ольга">
+                    <input type="text" id="your-name" name="your-name" placeholder="Ольга" required>
                 </div>
                 <div class="input-block">
                     <label for="baby-name">Имя ребёнка:</label>
-                    <input type="text" id="baby-name" name="baby-name" placeholder="Даниил">
+                    <input type="text" id="baby-name" name="baby-name" placeholder="Даниил" required>
                 </div>
                 <div class="input-block">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="super-mama@mail.ru">
+                    <input type="email" id="email" name="email" placeholder="super-mama@mail.ru" required>
                 </div>
                 <div class="input-block">
                     <label for="dob">Дата рождения ребёнка:</label>
-                    <input type="date" id="dob" name="dob">
+                    <input type="date" id="dob" name="dob" required>
                 </div>
                 <div class="input-block">
                     <label for="country">Страна:</label>
-                    <select id="country" name="country">
+                    <select id="country" name="country" required>
                         <option value="russia">Россия</option>
-                        <option value="russia">Беларусь</option>
-                        <option value="russia">Казахстан</option>
+                        <option value="belarus">Беларусь</option>
+                        <option value="kazakhstan">Казахстан</option>
                     </select>
                 </div>
                 <div class="input-block">
                     <label for="gender">Пол ребёнка:</label>
-                    <select id="gender" name="gender">
+                    <select id="gender" name="gender" required>
                         <option value="boy">Мальчик</option>
                         <option value="girl">Девочка</option>
                     </select>
                 </div>
                 <div class="input-block">
                     <label for="password">Пароль:</label>
-                    <input type="password" id="password" name="password" pattern="^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$" 
-                    title="Пароль должен содержать минимум 8 символов, как минимум одну цифру и буквы латинского алфавита" 
-                    placeholder="Пример пароля: passw0rd">
+                    <input type="password" id="password" name="password" pattern="^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$"
+                    title="Пароль должен содержать минимум 8 символов, как минимум одну цифру и буквы латинского алфавита"
+                    placeholder="Пример пароля: passw0rd" required>
                 </div>
                 <div class="input-block">
                     <button class="submit_button" type="submit">Зарегистрироваться</button>
@@ -64,10 +65,9 @@
             </form>
         </div>
         <div class="r_center">
-                <img src="{% static 'img/doc_formdoc3.jpg' %}" alt="doc3" class="doc3">
+            <img src="{% static 'img/doc_formdoc3.jpg' %}" alt="doc3" class="doc3">
         </div>
     </div>
-
 </div>
 </body>
 </html>

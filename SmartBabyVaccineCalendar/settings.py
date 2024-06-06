@@ -5,7 +5,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&kh^nlh(oqj6r=3xgwc-2ppurgnu_to-%4ss&(nl6ewuov#d5w'
+with open(os.path.join(BASE_DIR, 'secret_key.txt')) as key:
+    SECRET_KEY = key.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -110,4 +111,11 @@ STATICFILES_DIRS = [
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'smart_vaccine.User'
+LOGIN_URL = 'login_user'  # URL-адрес для авторизации
+LOGIN_REDIRECT_URL = 'account'  # URL-адрес, куда перенаправлять после успешной авторизации
